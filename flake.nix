@@ -42,6 +42,16 @@
             # Lets you run `nix run .` to start nixvim
             default = nvim;
           };
+          devShells.default = pkgs.mkShellNoCC {
+            shellHook = ''
+              echo Welcome to a Neovim dev environment powered by Nixvim -- https://github.com/nix-community/nixvim
+              PS1="Nixvim: \\w \$ "
+              alias vim='nvim'
+            '';
+            packages = [
+              nvim
+            ];
         };
+      };
     };
 }
