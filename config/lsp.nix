@@ -43,6 +43,10 @@
               cargo.features = "all";
             };
           };
+          gopls = {
+            enable = true;
+            filetypes = [ "go" ];
+          };
         };
       };
 
