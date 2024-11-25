@@ -131,6 +131,10 @@
           enable = true;
           filetypes = [ "go" ];
         };
+        dartls = {
+          enable = true;
+          filetypes = [ "dart" ];
+        };
       };
     };
 
